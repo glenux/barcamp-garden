@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby '1.9.3'
+ruby '2.5.3'
 
 group :assets do
   gem "sass-rails" #, "~> 3.2.6"
@@ -21,10 +21,10 @@ gem "rails" #, "~> 3.0"
 gem "rb-readline" #, "~> 0.5.0"
 gem "haml" #, "~> 4.0"
 gem "devise" #, "~> 3.0.2"
-gem "omniauth" #, "~> 1.1.4"
-gem "omniauth-twitter" #, "~> 1.0.0"
-gem "omniauth-facebook" #, "~> 1.4.1"
-gem "twitter" #, "~> 4.8.1"
+# gem "omniauth" #, "~> 1.1.4"
+# gem "omniauth-twitter" #, "~> 1.0.0"
+# gem "omniauth-facebook" #, "~> 1.4.1"
+# gem "twitter" #, "~> 4.8.1"
 gem "cancan" #, "~> 1.6.10"
 gem "rails_admin" #, "~> 0.4.6"
 gem "high_voltage" #, "~> 1.2.4"
@@ -37,6 +37,6 @@ gem "etherpad-lite" #, "~> 0.2.3"
 gem "jquery-rails" #, "~> 2.3.0"
 gem "daemons-rails" #, "~> 1.2.0"
 gem "unicorn" #, "~> 4.3.1"
-gem "capistrano" #, "~> 2.15.5"
 gem "bluecloth" #, "~> 2.2.0"
 gem "paperclip" #, "~> 3.5.1"
+
