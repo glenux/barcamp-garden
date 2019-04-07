@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:9.6
+    environment:
+      POSTGRES_USER: barcamp
+      POSTGRES_PASSWORD: barcamp
+      POSTGRES_DB: barcamp
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    restart: "no"
+
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    environment:
+      # Please define with -e on the command line for test
+      BARCAMP_ENV: development
+      DATABASE_URL: postgres://barcamp:barcamp@db:5432/barcamp
+    volumes:
+      - .:/app
+    # command: ...
+    restart: "no"
+    ports:
+      - "3000:3000"
+    links:
+      - db
+
+volumes:
+  pg_data:
